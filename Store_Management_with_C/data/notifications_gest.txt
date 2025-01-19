@@ -1,0 +1,2 @@
+Le client portant le numero  souhaite commander 60 unites du produit avec l'ID P005, mais il ne reste que 50 unites en stock
+Le client portant le numero  souhaite commander 51 unites du produit avec l'ID P005, mais il ne reste que 50 unites en stock
