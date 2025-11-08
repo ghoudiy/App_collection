@@ -1,12 +1,13 @@
 SET SERVEROUTPUT ON;
---ACCEPT nume NUMBER PROMPT 'Donner le numero d'employe: ';
---ACCEPT fct VARCHAR2(15) PROMPT 'Donner la fonction d'employe: ';
---ACCEPT commiss NUMBER PROMPT 'Donner la commission d'employe: ';
+SET VERIFY OFF;
+ACCEPT nume NUMBER PROMPT 'Donner le numero d''employe: ';
+ACCEPT fct CHAR PROMPT 'Donner la fonction d''employe: ';
+ACCEPT commiss NUMBER PROMPT 'Donner la commission d''employe: ';
 
 DECLARE 
     commiss_null EXCEPTION;
     nume Employe.numemp%TYPE := &nume;
-    fct Employe.fonction%TYPE := &fct;
+    fct Employe.fonction%TYPE := '&fct';
     commiss Employe.commission%TYPE := &commiss;
     numemploye Employe.numemp%TYPE;
 BEGIN
@@ -19,3 +20,4 @@ EXCEPTION
     when commiss_null then dbms_output.put_line('un représentant ne doit pas avoir une commission nulle');
 end;
 
+/

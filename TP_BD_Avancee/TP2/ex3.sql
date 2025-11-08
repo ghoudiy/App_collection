@@ -9,7 +9,7 @@ BEGIN
   from reservation
   where numcl = 20;
   if ca = 0 THEN
-  raise cl_nonvalable_err;
+    raise cl_nonvalable_err;
   ELSE
     cat := 'fidele';
     if ca < 1000 THEN
